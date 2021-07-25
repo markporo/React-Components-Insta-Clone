@@ -35,7 +35,9 @@ const App = () => {
      */
     const mappedPostsArr = posts.map(eachPost => {
       if (eachPost.id === postId) {
-        return { ...eachPost, likes: eachPost.likes + 1 }
+        return (eachPost.likedByUser === false ? { ...eachPost, likedByUser: true, likes: eachPost.likes + 1 } :
+          { ...eachPost, likes: eachPost.likes - 1, likedByUser: false }
+        )
       } else {
         return eachPost;
       }

@@ -3,7 +3,7 @@ import Post from './Post';
 //import PostHeader from './PostHeader';
 import './Posts.css';
 
-const Posts = ({ likePost, posts }) => {
+const Posts = ({ likePost, posts, setLiked }) => {
   // 🔥 Make sure the parent of Posts is passing the right props!
   // const  { likePost, posts } = props;
 
